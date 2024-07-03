@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task | CSS </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'ink free', sans-serif;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        p {
+            background-color: #eee;
+            padding: 8px;
+            border-left: 5px solid #E91E63;
+            position: relative;
+            width: 450px;
+            margin: 50px auto;
+        }
+
+        p::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -30px;
+
+            background-color: transparent;
+            width: -10px;
+            height: -10px;            
+            border: 15px solid;
+            border-color: transparent #E91E63 transparent transparent;
+        }
+
+        p::before {
+            content: attr(data-person);
+            width: 50px;
+
+            position: absolute;
+            top: 0;
+            left: -90px;
+
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        p::selection {
+            background-color: #E91E63;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <p data-person="Osama"> This Is Very Very Long Comment Number one </p>
+    <p data-person="Ahmed"> This Is Very Very Long Comment Number two </p>
+    <p data-person="Sayed"> This Is Very Very Long Comment Number Three </p>
+
+</body>
+</html>
